@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Discord Theme Preview</title>
+    <style>
+        /* General Theme Colors */
+        :root {
+            --background-primary: #1e1e2e;
+            --background-secondary: #282a36;
+            --background-tertiary: #44475a;
+            --text-normal: #f8f8f2;
+            --text-muted: #6272a4;
+            --accent-color: #8be9fd;
+            --accent-hover-color: #50fa7b;
+        }
+
+        /* Body and Main Background */
+        body {
+            background-color: var(--background-primary);
+            font-family: "Segoe UI Variable", sans-serif;
+            color: var(--text-normal);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Discord Mockup Container */
+        .discord-mockup {
+            background-color: var(--background-secondary);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .discord-header, .discord-footer {
+            background-color: var(--background-tertiary);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .discord-header h1, .discord-footer p {
+            margin: 0;
+            color: var(--text-normal);
+        }
+
+        .discord-body {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--background-primary);
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .discord-message {
+            margin: 10px 0;
+            color: var(--text-normal);
+        }
+
+        .discord-message .username {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .discord-message .mention {
+            color: var(--accent-color);
+            background-color: var(--background-tertiary);
+            padding: 2px 4px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="discord-mockup">
+        <div class="discord-header">
+            <h1>Discord Server Name</h1>
+        </div>
+
+        <div class="discord-body">
+            <div class="discord-message">
+                <span class="username">User1:</span> This is a message in the chat.
+            </div>
+            <div class="discord-message">
+                <span class="username">User2:</span> This is another message, <span class="mention">@User1</span>.
+            </div>
+            <div class="discord-message">
+                <span class="username">User3:</span> Check out this cool <a href="#" style="color: var(--accent-hover-color); text-decoration: none;">link</a>!
+            </div>
+        </div>
+
+        <div class="discord-footer">
+            <p>Connected as <span class="username">YourUsername</span></p>
+        </div>
+    </div>
+
+</body>
+</html>
